@@ -16,6 +16,7 @@ TKAlertController supports both UIAlertView (or UIActionSheet) and UIAlertContro
 
 - It does not support delegates about UITextField in UIAlertView.
 - It does not support Localized String.
+- when ``UIAlertController`` show, ``ViewWillDisapper:`` is not called. (but in ``TKAlertController``, it's called.)
 
 ## Usage
 
@@ -68,5 +69,6 @@ TKAlertAction *OKAction =
 
 ``presentTKAlertController:animated:completion:`` is in category in UIViewController.
 
+## LICENSE
 
-
+MIT
