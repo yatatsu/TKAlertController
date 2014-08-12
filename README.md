@@ -6,9 +6,11 @@ TKAlertController supports both UIAlertView (or UIActionSheet) and UIAlertContro
 
 ## About
 
-TKAlertController is UIAlertController for under iOS8.
-In iOS8, It works as UIAlertController. 
-And in previous OS version, It works as UIAlertView or UIAcitonSheet.
+- TKAlertController is UIAlertController for under iOS8.
+- In iOS8, It works as UIAlertController. 
+- And in previous OS version, It works as UIAlertView or UIAcitonSheet.
+- You can use it in same way for any versions.
+- It works in both Xcode 6beta and 5x.
 
 ## Known issue
 
@@ -27,6 +29,7 @@ UIViewController *alertController =
 ```
 
 ``TKAlertControllerStyleAlert`` is insted of ``UIAlertContollerStyleAlert``.
+
 and ``TKAlertControllerStyleActionSheet`` is instead of ``UIAlertControllerStyleActionSheet``.
 
 2. Second, we prepare ``TKAlertAction`` as ``UIAlertAction``.
@@ -35,7 +38,7 @@ and ``TKAlertControllerStyleActionSheet`` is instead of ``UIAlertControllerStyle
 TKAlertAction *cancelAction =
      [TKAlertAction actionWithTitle:kButtonTitleCancel
                               style:TKAlertActionStyleCancel
-                            handler:^(id action) {
+                            handler:^(TKAlertAction *action) {
 							// something to do.
                             }];
 
@@ -64,4 +67,6 @@ TKAlertAction *OKAction =
 ```
 
 ``presentTKAlertController:animated:completion:`` is in category in UIViewController.
+
+
 
