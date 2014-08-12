@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
 
   s.source_files  = "TKAlertController/*.{h,m}"
   s.exclude_files = "TKAlertControllerSample", "TKAlertControllerTests"
-  s.require_arc   = true
+  s.requires_arc  = true
 end
