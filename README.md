@@ -1,0 +1,67 @@
+# TKAlertController
+
+---
+
+TKAlertController supports both UIAlertView (or UIActionSheet) and UIAlertController.
+
+## About
+
+TKAlertController is UIAlertController for under iOS8.
+In iOS8, It works as UIAlertController. 
+And in previous OS version, It works as UIAlertView or UIAcitonSheet.
+
+## Known issue
+
+- It does not support delegates about UITextField in UIAlertView.
+- It does not support Localized String.
+
+## Usage
+
+1. First we create ``TKAlertController``, as ``UIAlertController``.
+
+```
+UIViewController *alertController =
+[TKAlertController alertControllerWithTitle:@"title"
+                                    message:@"message"
+                             preferredStyle:TKAlertControllerStyleAlert];
+```
+
+``TKAlertControllerStyleAlert`` is insted of ``UIAlertContollerStyleAlert``.
+and ``TKAlertControllerStyleActionSheet`` is instead of ``UIAlertControllerStyleActionSheet``.
+
+2. Second, we prepare ``TKAlertAction`` as ``UIAlertAction``.
+
+```
+TKAlertAction *cancelAction =
+     [TKAlertAction actionWithTitle:kButtonTitleCancel
+                              style:TKAlertActionStyleCancel
+                            handler:^(id action) {
+							// something to do.
+                            }];
+
+TKAlertAction *OKAction =
+     [TKAlertAction actionWithTitle:kButtonTitleOK
+                              style:TKAlertActionStyleDestructive
+                            handler:^(TKAlertAction *action) {
+							// something to do.
+							}];
+
+```
+
+3. then, add action to controller.
+
+```
+[alertController addAction:cancelAction];
+[alertController addAction:OKAction];
+```
+
+4. finally, call the method to show.
+
+```
+[self presentTKAlertController:alertController animated:YES completion:^{
+	  // 
+}];
+```
+
+``presentTKAlertController:animated:completion:`` is in category in UIViewController.
+
