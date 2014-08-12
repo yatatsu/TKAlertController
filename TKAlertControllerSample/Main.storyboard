@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="vXN-Ox-tgV">
+                                <rect key="frame" x="0.0" y="120" width="320" height="448"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="nli-rC-Ne1">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nli-rC-Ne1" id="27c-vp-h7a">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="h3w-gI-Uop"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="D4f-e3-ArG"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKv-CS-TEI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="TvF-UE-Wj5"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="AlertSample" id="mS8-F0-xEY"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="no message." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hT8-Ex-GWP">
+                                <rect key="frame" x="16" y="82" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nRs-dI-D81"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap following cell and present alert." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNr-v8-qcD">
+                                <rect key="frame" x="16" y="53" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pGf-ne-iGk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hT8-Ex-GWP" secondAttribute="trailing" constant="16" id="3st-Ds-39l"/>
+                            <constraint firstItem="hT8-Ex-GWP" firstAttribute="top" secondItem="eNr-v8-qcD" secondAttribute="bottom" constant="8" id="9yE-MZ-8NG"/>
+                            <constraint firstAttribute="trailing" secondItem="vXN-Ox-tgV" secondAttribute="trailing" id="AhW-3E-26i"/>
+                            <constraint firstItem="NKv-CS-TEI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="D0A-Na-kSP"/>
+                            <constraint firstItem="vXN-Ox-tgV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Gga-n0-BY5"/>
+                            <constraint firstAttribute="trailing" secondItem="NKv-CS-TEI" secondAttribute="trailing" id="Mcj-jL-5bi"/>
+                            <constraint firstItem="hT8-Ex-GWP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="Z3e-Mi-ZBy"/>
+                            <constraint firstItem="vXN-Ox-tgV" firstAttribute="top" secondItem="hT8-Ex-GWP" secondAttribute="bottom" constant="8" id="Z8a-yt-qBP"/>
+                            <constraint firstItem="eNr-v8-qcD" firstAttribute="top" secondItem="NKv-CS-TEI" secondAttribute="bottom" constant="9" id="jO9-uc-79G"/>
+                            <constraint firstAttribute="trailing" secondItem="eNr-v8-qcD" secondAttribute="trailing" constant="16" id="kLV-SL-cri"/>
+                            <constraint firstItem="eNr-v8-qcD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="kmt-dZ-RPW"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vXN-Ox-tgV" secondAttribute="bottom" id="uA1-6P-nm4"/>
+                            <constraint firstItem="NKv-CS-TEI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="wXB-kw-gYH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loggingField" destination="hT8-Ex-GWP" id="SXl-x0-wJs"/>
+                        <outlet property="tableView" destination="vXN-Ox-tgV" id="hg1-pi-cZ3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
+</document>
