@@ -154,20 +154,19 @@
                                                    cancelButtonTitle:nil
                                               destructiveButtonTitle:nil
                                                    otherButtonTitles:nil, nil];
-    
     [self.actions enumerateObjectsUsingBlock:^(TKAlertAction *action, NSUInteger idx, BOOL *stop) {
         switch (action.style) {
             case TKAlertActionStyleCancel:
-                actionSheet.cancelButtonIndex = idx;
                 break;
             case TKAlertActionStyleDestructive:
-                actionSheet.destructiveButtonIndex = idx;
+                actionSheet.destructiveButtonIndex = [actionSheet addButtonWithTitle:self.destructiveAlertAction.title];
                 break;
             default:
+                [actionSheet addButtonWithTitle:action.title];
                 break;
         }
-        [actionSheet addButtonWithTitle:action.title];
     }];
+    actionSheet.cancelButtonIndex = [actionSheet addButtonWithTitle:self.cancelAlertAction.title];
     
     [actionSheet showInView:[UIApplication sharedApplication].windows.firstObject];
 }
@@ -213,6 +212,7 @@
             break;
         case TKAlertActionStyleDestructive:
             self.destructiveAlertAction = alertAction;
+            break;
         default:
             break;
     }

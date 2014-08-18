@@ -55,7 +55,6 @@ static NSString *kButtonTitlePostpone = @"Remind me later";
      [TKAlertAction actionWithTitle:kButtonTitleCancel
                               style:TKAlertActionStyleCancel
                             handler:^(id action) {
-                                NSLog(@"hohoho");
                                 [wself didClickCancelButtonWithTag:tag
                                                            message:title];
                             }];
@@ -78,7 +77,7 @@ static NSString *kButtonTitlePostpone = @"Remind me later";
     [alertController addAction:cancelAction];
     [alertController addAction:OKAction];
     [alertController addAction:postponeAction];
-    
+
     // present viewController
     [self presentTKAlertController:alertController animated:YES completion:^{
         NSLog(@"...");
