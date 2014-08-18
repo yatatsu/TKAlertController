@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = "6.0"
 
-  s.source       = { :git => "http://EXAMPLE/TKAlertController.git", :tag => "0.0.2" }
+  s.source       = { :git => "http://github.com/yatatsu/TKAlertController.git", :tag => "0.0.2" }
 
   s.source_files  = "TKAlertController/*.{h,m}"
   s.exclude_files = "TKAlertControllerSample", "TKAlertControllerTests"
