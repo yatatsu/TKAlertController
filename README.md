@@ -15,7 +15,6 @@ TKAlertController supports both UIAlertView (or UIActionSheet) and UIAlertContro
 ## Known issue
 
 - It does not support delegates about UITextField in UIAlertView.
-- It does not support Localized String.
 - When ``UIAlertController`` show, ``ViewWillDisapper:`` is not called. (but in ``TKAlertController``, it's called.)
 - Rotate device when alert is presented, layout will broken. (freeze previous orientation)
 
