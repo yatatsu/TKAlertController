@@ -317,7 +317,8 @@
     if ([controller isKindOfClass:[TKAlertController class]]) {
         controller.modalPresentationStyle = UIModalPresentationCurrentContext;
         controller.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-        self.modalPresentationStyle = UIModalPresentationCurrentContext;
+        UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
+        rootViewController.modalPresentationStyle = UIModalPresentationCurrentContext;
     }
     [self presentViewController:controller animated:animated completion:completion];
 }
