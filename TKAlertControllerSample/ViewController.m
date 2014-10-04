@@ -29,18 +29,6 @@ static NSString *kCellIdentifier = @"UITableViewCell";
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    NSLog(@"even though alertViewController dissmiss, it not called!");
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    NSLog(@"never called even though alert has shown.");
-}
-
 #pragma mark - Public
 
 - (void)displayMessage:(NSString *)message
@@ -86,7 +74,7 @@ static NSString *kCellIdentifier = @"UITableViewCell";
                     cell.textLabel.text = @"UIActionSheet";
                     break;
                 case ACSWithAlertAction:
-                    cell.textLabel.text = @"UIAlertControllerStyleActionSheet";
+                    cell.textLabel.text = @"TKAlertController ActionSheet";
                     break;
             }
             break;
@@ -98,7 +86,7 @@ static NSString *kCellIdentifier = @"UITableViewCell";
                     cell.textLabel.text = @"UIAlertView";
                     break;
                 case ACSWithAlertAction:
-                    cell.textLabel.text = @"UIAlertControllerStyleAlert";
+                    cell.textLabel.text = @"TKAlertController AlertView";
                     break;
             }
             break;

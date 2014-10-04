@@ -30,7 +30,7 @@ static NSString *kButtonTitlePostpone = @"Remind me later";
 - (void)presentAlertViewWithTag:(NSInteger)tag
 {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"AlertViewOldStyle"
-                                                        message:@"Please input 5 chars at least."
+                                                        message:@"This is UIAlertView"
                                                        delegate:self
                                               cancelButtonTitle:kButtonTitleCancel
                                               otherButtonTitles:kButtonTitleOK, kButtonTitlePostpone, nil];
@@ -43,10 +43,10 @@ static NSString *kButtonTitlePostpone = @"Remind me later";
 
 - (void)presentActionSheetUsingAlertActionWithTag:(NSInteger)tag
 {
-    NSString *title = @"UIAlertController";
+    NSString *title = @"TKAlertController";
     UIViewController *alertController =
      [TKAlertController alertControllerWithTitle:title
-                                         message:@"message can be here"
+                                         message:@"This is TKAlertController."
                                   preferredStyle:TKAlertControllerStyleActionSheet];
     
     // AlertAction
@@ -80,16 +80,16 @@ static NSString *kButtonTitlePostpone = @"Remind me later";
 
     // present viewController
     [self presentTKAlertController:alertController animated:YES completion:^{
-        NSLog(@"...");
+        [self displayMessage:@"completion TKAlertController"];
     }];
 }
 
 - (void)presentAlertViewUsingAlertActionWithTag:(NSInteger)tag
 {
-    NSString *title = @"UIAlertController";
+    NSString *title = @"TKAlertController";
     UIViewController *alertController =
     [TKAlertController alertControllerWithTitle:title
-                                        message:@"Please input 5 chars at least."
+                                        message:@"This is TKAlert Controller."
                                  preferredStyle:TKAlertControllerStyleAlert];
     
     // AlertAction
@@ -133,7 +133,7 @@ static NSString *kButtonTitlePostpone = @"Remind me later";
     
     // present ViewController
     [self presentTKAlertController:alertController animated:YES completion:^{
-        NSLog(@"show alert.");
+        [self displayMessage:@"completion TKAlertController"];
     }];
 }
 
